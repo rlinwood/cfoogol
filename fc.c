@@ -320,7 +320,7 @@ void remove_(char *key) {
 int PROGRAM(void) { 
   d("PROGRAM",token,pending);
   if (!match("begin"))	return 0;	out("#include <stdio.h>");
-                                        out("main() {");
+                                        out("int main() {"); 
   if (!OPT_DECLARATION()) return 0;
   if (!STATEMENT())	return 0;
   while (match(";"))
